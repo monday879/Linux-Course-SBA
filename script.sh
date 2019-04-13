@@ -1,47 +1,46 @@
 #!/bin/sh -u
 #
 # CST8213
-# Qichen Jia
+# jia00025
 # This script documents and tries to completes the CST8213 SBA tasks.
 #
 PATH=/bin:/usr/bin:/sbin ; export PATH          # (2) PATH line
-umask 022                                    # (3) umask line
+umask 022                                       # (3) umask line
 #
-# Variables
+
+
+# Variables, you can change them per SBA test requirements.
 testuser=last
 testuserpass=exam
 #ncport1=234
 #ncport2=432
-testservernet=172.16.30.44
+testservernet=172.16.30.44  # These three IP addresses are assigned by the Course Prof
 testclientnet=172.16.31.44
 testaliasnet=172.16.32.44
-
-# Minor services domain, 1 name server and a reverse zone, and a www. virtual hosts.
+# DNS service domain, 2 name server and a reverse zone, default http index page and a www. virtual hosts.
 testdomain1=snow.lab
-
 # Discarded
 testdomain2=snow.lab
-
-# Apache section first virtual host.
+# Apache section Domain.
 vdomain1=white.lab
-
-# Maildomain in major services.
-testmaildomain=bashful.lab
-testmaildomain2=sleppy.lab
-
+# Mail domains.
+testmaildomain=bashful.lab # first mail domain, can receive email for $testuser@$testmaildomain
+testmaildomain2=sleppy.lab # second mail domain, can receive email for $mailalias@testmaildomain2
 testhostname=jia00025-srv.$testdomain1
 mailalias=labtest
-
 # LDAP
-ldapdb=bdb
-ldapcn=ldapadm
-ldapdc1=grumpy
-ldapdc2=lab
-ldapdir=grumpy.lab
+ldapdb=bdb # dbname in the global config file
+ldapcn=ldapadm # dbadmin in the global config file
+ldapdc1=grumpy # Base domain entry dc1
+ldapdc2=lab # Base domain entry dc2
+ldapdir=grumpy.lab # use in where ldapdc1.ldapdc2
 # You may need to type in ldap entries manully
-#
+# There are base.ldif, ou.ldif, host.ldif for entries containing in this script.
+
+
 # Required Setup Section
-#
+# You may need to disable the selinux in the /etc/selinux/config file manually. Or 
+# change the selinux tag once share a file in smb or nfs.
 yum install postfix
 yum install bind
 yum install httpd
@@ -49,10 +48,13 @@ systemctl stop NetworkManager.service
 systemctl disable NetworkManager.service
 iptables -F
 
-useradd $testuser -g wheel -p $testuserpass
+useradd $testuser -g wheel -p $testuserpass # Add user as the test instruction asking.
 useradd cst8213 -g wheel -p cst8213
 
-hostnamectl set-hostname $testhostname
+hostnamectl set-hostname $testhostname # Change the server host name.
+
+# 1. Make sure the NIC names are ens33 and ens34, otherwise you need to change them accordingly, don't forget the file name as well in the folder.
+# 2. Change the NETMASK and NETWOKR and BROADCAST accordingly.
 echo "`cat /etc/sysconfig/network-scripts/ifcfg-ens33 | grep UUID`" >> sba/ifcfg-ens33
 echo "UUID=`uuidgen ens34`" >> sba/ifcfg-ens34
 echo "`cat sba/ifcfg-ens34 | grep UUID`" >> sba/ifcfg-ens34:0
@@ -94,8 +96,11 @@ cp sba/resolv.conf /etc/resolv.conf
 #
 systemctl restart network
 
+
+
 # Minor Services Section
 # SSH
+# SSH config file enable the publickey authentication, passwordauthentication and rootlogin.
 cp sba/sshd_config1 /etc/ssh/sshd_config
 systemctl restart sshd
 #
@@ -283,7 +288,7 @@ cp sba/named.$vdomain1 /var/named/named.$vdomain1
 cp sba/named.$testmaildomain /var/named/named.$testmaildomain
 cp sba/named.$testmaildomain2 /var/named/named.$testmaildomain2
 #
-# YOU NEED TO CONFIG THE SLAVE ZONES IN CLIENT !!!!!
+# The slave zone configuation for client VM (ns2) is in the sbac folder
 #
 # Restart DNS service
 systemctl restart named
@@ -302,6 +307,8 @@ systemctl restart sshd
 #
 # Apache
 # Install httpd
+#
+# Generate ssl certificate for secure site https use.
 yum install openssl
 yum install mod_ssl
 mkdir /etc/httpd/tls
@@ -309,6 +316,7 @@ mkdir /etc/httpd/tls/key
 chmod 700 /etc/httpd/tls/key
 mkdir /etc/httpd/tls/cert
 chmod 755 /etc/httpd/tls/cert
+# Change the organization, ou, common name accordingly.
 openssl req -x509 -newkey rsa -days 120 -nodes -keyout /etc/httpd/tls/key/white.key -out /etc/httpd/tls/cert/white.cert -subj '/O=CST8213/OU=white.lab/CN=secure.white.lab'
 # Create directory tree
 mkdir /var/www/vhosts
@@ -329,7 +337,7 @@ echo -e "<Title>default.$testdomain1</Title>
 <H1>Host: $testhostname [$testservernet]</H1>
 <H1>MagicNumber: 44</H1>
 <H1>Network-ID: $testservernet</H1>
-<H1>Name: Qichen Jia</H1>
+<H1>Name: Q.J.</H1>
 <H1>Station: 12</H1>
 <H1>Word: DEFAULT</H1>
 " >> /var/www/html/index.html
@@ -341,7 +349,7 @@ echo -e "<Title>www.$vdomain1</Title>
 <H1>Host: $testhostname [$testservernet]</H1>
 <H1>MagicNumber: 44</H1>
 <H1>Network-ID: $testservernet</H1>
-<H1>Name: Qichen Jia</H1>
+<H1>Name: Q.J.</H1>
 <H1>Station: 12</H1>
 <H1>Word: WHITE</H1>
 <H1>Site Name: www.$vdomain1</H1>
@@ -354,7 +362,7 @@ echo -e "<Title>www1.$vdomain1</Title>
 <H1>Host: $testhostname [$testservernet]</H1>
 <H1>MagicNumber: 44</H1>
 <H1>Network-ID: $testservernet</H1>
-<H1>Name: Qichen Jia</H1>
+<H1>Name: Q.J.</H1>
 <H1>Station: 12</H1>
 <H1>Site Name: www1.$vdomain1</H1>
 " >> /var/www/vhosts/www1.$vdomain1/html/index.html
@@ -366,7 +374,7 @@ echo -e "<Title>www2.$vdomain1</Title>
 <H1>Host: $testhostname [$testservernet]</H1>
 <H1>MagicNumber: 44</H1>
 <H1>Network-ID: $testservernet</H1>
-<H1>Name: Qichen Jia</H1>
+<H1>Name: Q.J.</H1>
 <H1>Station: 12</H1>
 <H1>Site Name: www2.$vdomain1</H1>
 " >> /var/www/vhosts/www2.$vdomain1/html/index.html
@@ -378,7 +386,7 @@ echo -e "<Title>secure.$vdomain1</Title>
 <H1>Host: $testhostname [$testaliasnet]</H1>
 <H1>MagicNumber: 44</H1>
 <H1>Network-ID: $testaliasnet</H1>
-<H1>Name: Qichen Jia</H1>
+<H1>Name: Q.J.</H1>
 <H1>Station: 12</H1>
 <H1>Site Name: secure.$vdomain1</H1>
 " >> /var/www/vhosts/secure.$vdomain1/html/index.html
@@ -515,17 +523,17 @@ echo -e "dn: ou=people,dc=$ldapdc1,dc=$ldapdc2
 objectclass: organizationalUnit
 ou: people
 
-dn: uid=Richard Hagemeyer,ou=people,dc=$ldapdc1,dc=$ldapdc2
+dn: uid=R.H.,ou=people,dc=$ldapdc1,dc=$ldapdc2
 objectclass: inetOrgPerson
 objectclass: posixAccount
-cn: Richard
-sn: Hagemeyer
-uid: Richard Hagemeyer
+cn: R
+sn: H
+uid: R.H.
 uidNumber: 1003
 gidNumber: 1000
 homeDirectory: /home/jia00025
 loginshell: /bin/bash
-mail: Richard Hagemeyer@$ldapdir
+mail: R.H.@$ldapdir
 userPassword:
 " > /etc/openldap/ldif.$ldapdc1/ou.ldif
 
@@ -607,11 +615,11 @@ mkdir /srv/samba
 mkdir /srv/samba/rwShare
 echo -e "Magic Number: 44
 Network-ID: 172.16.30.44
-Name: Qichen Jia
+Name: Q.J.
 Station: 12" > /srv/samba/rwShare/readme.smb
 echo -e "Magic Number: 44
 Network-ID: 172.16.30.44
-Name: Qichen Jia
+Name: Q.J.
 Station: 12" > /home/last/readme.smb
 chmod 777 /home/last/readme.smb
 
@@ -626,7 +634,7 @@ mkdir /srv/nfs
 mkdir /srv/nfs/share
 echo -e "Magic Number: 44
 Network-ID: 172.16.30.44
-Name: Qichen Jia
+Name: Q.J.
 Station: 12" > /srv/nfs/share/readme.nfs
 chmod 777 /srv/nfs/share/readme.nfs
 
