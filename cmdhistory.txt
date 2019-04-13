@@ -1,0 +1,1000 @@
+   34  ps uaxww | grep nc
+   35  kill 54704
+   36  ps uaxww | grep nc
+   37  iptables -L -n -v
+   38  ./demo.sh 
+   39  ps uaxww | grep nc
+   40  ./demo.sh 
+   41  nc 172.16.30.44 49999
+   42  iptables -L -n -v
+   43  ss -ltpn | grep 22
+   44  dig www.google.ca
+   45  iptables -L -n -v
+   46  ss -ltpn
+   47  ping 172.16.30.108
+   48  service named restart
+   49  dig -x 8.8.8.8
+   50  host google.ca
+   51  host 8.8.8.8
+   52  host 172.16.30.44
+   53  host 8.8.8.8
+   54  service named restart
+   55  dig -x 8.8.8.8
+   56  service postfix restart
+   57  ss -ltpn | :25
+   58  ss -ltpn | grep :25
+   59  nc 172.16.30.44 25
+   60  ss -ltpn | grep :25
+   61  mail
+   62  mailq
+   63  su - cst8213
+   64  postconf -d
+   65  postconf -d | grep hostname
+   66  gethostname
+   67  hostname
+   68  service restart postfix
+   69  service postfix restart
+   70  service named restart
+   71  dig mail.example44.lab
+   72  dig -x 172.16.30.44
+   73  su - cst8213
+   74  service postfix restart
+   75  service named restart
+   76  su - cst8213
+   77  service named restart
+   78  dig mx example44.lab
+   79  service named restart
+   80  su - cst8213
+   81  echo $domain
+   82  echo $mydomian
+   83  echo $hostname
+   84  hostname
+   85  service postfix restart
+   86  su - cst8213
+   87  service postfix restart
+   88  su - cst8213
+   89  service postfix restart
+   90  su - cst8213
+   91  service postfix restart
+   92  su - cst8213
+   93  postalias /etc/aliases
+   94  vim /etc/aliases
+   95  postalias /etc/aliases
+   96  vim /etc/aliases
+   97  postalias -q geeks /etc/aliases
+   98  mail
+   99  su - cst8213
+  100  top
+  101  man polkitd
+  102  mail
+  103  service postfix restart
+  104  yum search mysql
+  105  su - cst8213
+  106  mail
+  107  service postfix restart
+  108  service named restart
+  109  ./demo.sh 
+  110  dig example44.llab
+  111  dig example44.lab
+  112  dig mail.example44.lab
+  113  dig example44.lab
+  114  service named restart
+  115  dig example44.lab
+  116  dig mx example44.lab
+  117  dig google.ca
+  118  dig -x 8.8.8.8
+  119  service httpd restart
+  120  nc localhost 80
+  121  ss -ltpn | grep :80
+  122  service httpd restart
+  123  vim testnet.sh 
+  124  vim /etc/nsswitch.conf
+  125  dig jia00025-srv.example44.lab
+  126  cat /etc/hosts
+  127  dig jia00025-SRV.example44.lab
+  128  cat /etc/hosts
+  129  dig -x 172.16.30.44
+  130  vim /etc/nsswitch.conf
+  131  service httpd restart
+  132  ./testnet.sh 
+  133  vim /etc/nsswitch.conf
+  134  dig jia00025-SRV.example44.lab
+  135  dig jia00025-srv.example44.lab
+  136  dig -x 172.16.30.44
+  137  ping jia00025-srv.example44.lab
+  138  service httpd restart
+  139  nc localhost 80
+  140  service network restart
+  141  service named restart
+  142  service httpd restart
+  143  ping jia00025-srv.example44.lab
+  144  cat /etc/hosts
+  145  nc jia00025-srv.example44.lab 80
+  146  httpdctl -t
+  147  apachectl -t
+  148  service httpd restart
+  149  service named restart
+  150  dig www.example44.lab
+  151  dig secure.example44.lab
+  152  dig www.site44.lab
+  153  dig -x 172.16.30.44
+  154  dig -x 172.16.32.44
+  155  dig www.site44.lab
+  156  service named restart
+  157  apachectl -t
+  158  service httpd restart
+  159  apachectl -t
+  160  service httpd restart
+  161  ss -ltpn
+  162  service httpd restart
+  163  apachectl -t
+  164  ll /etc/httpd/
+  165  ll /etc/httpd/modules/
+  166  ll /etc/httpd/modules/ | grep -i ssl
+  167  man apachectl
+  168  yum search ssl
+  169  yum install mod_ssl
+  170  service httpd restart
+  171  yum update
+  172  pw
+  173  wp
+  174  cw
+  175  pwd
+  176  mkdir sba
+  177  ll /etc/sysconfig/
+  178  cp /etc/sysconfig/network-scripts/ifcfg-ens33 sba/ifcfg-ens33
+  179  cp /etc/sysconfig/network-scripts/ifcfg-ens34 sba/ifcfg-ens34
+  180  cp /etc/sysconfig/network-scripts/ifcfg-ens34:0 sba/ifcfg-ens34:0
+  181  echo "cp /etc/sysconfig/network-scripts/ifcfg-ens34:0 sba/ifcfg-ens34:0" >> sba/script.sh
+  182  cp /etc/resolv.conf  sba/resolv.conf
+  183  echo "cp /etc/resolv.conf sba/resolv.conf" >> sba/script.sh 
+  184  cp /etc/hosts  sba/hosts
+  185  echo "cp /etc/hosts sba/hosts" >> sba/script.sh 
+  186  cp /etc/nsswitch.conf sba/nsswitch.conf
+  187  echo "cp /etc/nsswitch.conf sba/nsswitch.conf" >> sba/script.sh 
+  188  cp /etc/named.conf sba/named.conf
+  189  echo "cp /etc/named.conf sba/named.conf" >> sba/script.sh 
+  190  ll /var/named/
+  191  cp /var/named/named.16.172 sba/named.16.172
+  192  cp /var/named/named.example44.lab sba/named.example44.lab
+  193  cp /var/named/named.site44.lab44.lab sba/named.happy44.lab
+  194  cp /var/named/named.site44.lab sba/named.happy44.lab
+  195  echo "cp /var/named/named.16.172 sba/named.16.172" >> sba/script.sh 
+  196  echo "cp /var/named/named.example44.lab sba/named.example44.lab" >> sba/script.sh 
+  197  echo "cp /var/named/named.site44.lab sba/named.happy44.lab" >> sba/script.sh 
+  198  rpm -ql sshd
+  199  rpm -ql ssh
+  200  man sshd
+  201  cp /etc/ssh/sshd_config sba/sshd_config
+  202  echo "cp /etc/ssh/sshd_config sba/sshd_config" >> sba/sshd_config
+  203  cp FWrules.sh sba/FWrules.sh
+  204  echo "cp FWrules.sh sba/FWrules.sh" >> sba/script.sh 
+  205  cp /etc/postfix/main.cf  sba/main.cf
+  206  echo "cp /etc/postfix/main.cf  sba/main.cf" >> sba/script.sh 
+  207  cp /etc/aliases sba/aliases
+  208  echo "cp /etc/aliases sba/aliases" >> sba/script.sh 
+  209  echo "postalias -q geeks /etc/aliases" >> sba/script.sh 
+  210  abc
+  211  cp /etc/httpd/conf/httpd.conf sba/httpd.conf
+  212  echo "cp /etc/httpd/conf/httpd.conf sba/httpd.conf" >> sba/script.sh 
+  213  ss -tpan | grep ':49999'
+  214  ss -tpan | grep ':59999'
+  215  ss -tpan | grep ':49999'
+  216  ip addr
+  217  ss -tpan | grep ':59999'
+  218  ss -tpan | grep ':49999'
+  219  tcpdump -i ens 33
+  220  tcpdump -i ens33
+  221  ip addr
+  222  tcpdump -i ens34 -tttt -n -X
+  223  tcpdump -i ens34 -tttt -n -X | grep '172.16.30.44'
+  224  tcpdump -i ens34 -tttt -n -X
+  225  tcpdump -i ens34 -tttt -n -X | grep 'hello'
+  226  tcpdump -i ens34 -tttt -n -X
+  227  tcpdump -i lo -tttt -n -X
+  228  ss -tpan | grep ':59999'
+  229  tail -f logfile
+  230  tail -f /var/log
+  231  tail -f /var/log/messages
+  232  tcpdump -i ens34 -tttt host 172.16.30.44 and port 59999 -nX
+  233  echo 'tcpdump -i ens34 -tttt host 172.16.30.44 and port 59999 -nX' > tcpdump44.cli
+  234  tcpdump -i ens34 -tttt -nX
+  235  ll
+  236  tail -f /var/log/messages
+  237  tail /var/spool/mail/cst8213 
+  238  tail /var/spool/mail/cst8213 -n 77
+  239  dig -t mx example44.lab
+  240  tail /var/spool/mail/cst8213 -n 999
+  241  yum update
+  242  ss -ltpn
+  243  ll
+  244  ./demo.sh 
+  245  vim /var/named/named.site44.lab 
+  246  mail
+  247  yum install openldap
+  248  yum install openldap-servers
+  249  yum install openldap-clients
+  250  yum update
+  251  rpm -ql openldap
+  252  vim /etc/openldap/slapd.conf
+  253  man chmod
+  254  man chgrp
+  255  chgrp ldap /etc/openldap/slapd.conf
+  256  chmod 770 /etc/openldap/slapd.conf
+  257  vim /etc/postfix/main.cf 
+  258  vim /etc/aliases
+  259  ./demo.sh 
+  260  ll /var/lib/ldap/
+  261  ll /var/lib
+  262  mkdir /var/lib/ldap/example44.lab
+  263  chown ldap /var/lib/ldap/example44.lab
+  264  chgrp ldap /var/lib/ldap/example44.lab
+  265  chmod 700 /var/lib/ldap/example44.lab
+  266  vim /etc/openldap/slapd.conf
+  267  vim /etc/aliases
+  268  mail
+  269  vim /etc/openldap/slapd.conf
+  270  slaptest -u
+  271  rpm -ql openldap-server
+  272  rpm -ql openldap-servers
+  273  rpm -ql openldap-servers | grep DB_CONFIG | cp DB_CONFIG
+  274  vim /etc/openldap/slapd.conf
+  275  cp /usr/share/openldap-servers/DB_CONFIG.example  /var/lib/ldap/DB_CONFIG
+  276  chown ldap /var/lib/ldap/DB_CONFIG
+  277  systemctl enable slapd
+  278  systemctl start slapd
+  279  ss -ltpn
+  280  vim /etc/openldap/ldap.conf 
+  281  vim /var/named/named.example44.lab 
+  282  nmap
+  283  nmap 172.16.31.44
+  284  dig -x 1.1.1.1
+  285  dig -x 4.4.4.4
+  286  dig -x 4.4.8.8
+  287  dig ns google.ca
+  288  vim /etc/named.conf 
+  289  vim /var/named/named.example44.lab 
+  290  rpm -ql bind-utils 
+  291  man nsupdate
+  292  man ldapadd
+  293  ll /etc/openldap/ldif.example44/
+  294  man ldapadd
+  295  yum install nss-pam-ldapd
+  296  ss -ltpn | grep ldap
+  297  ss -ltpn
+  298  ss -ltpn | grep slapd
+  299  yum install samba
+  300  yum install samba-common
+  301  yum install samba-clients
+  302  yum install samba-client
+  303  testparm
+  304  vim /etc/samba/smb.conf
+  305  smbstatus 
+  306  smbclient -L localhost
+  307  systemctl start smbd
+  308  systemctl start smb
+  309  smbclient -L localhost
+  310  smbclient -L 172.16.30.44
+  311  vim /etc/samba/smb.conf
+  312  ss -ltpn
+  313  ll
+  314  ./demo.sh 
+  315  vim /var/named/named.site44.lab 
+  316  mail
+  317  yum install openldap
+  318  yum install openldap-servers
+  319  yum install openldap-clients
+  320  yum update
+  321  rpm -ql openldap
+  322  vim /etc/openldap/slapd.conf
+  323  man chmod
+  324  man chgrp
+  325  chgrp ldap /etc/openldap/slapd.conf
+  326  chmod 770 /etc/openldap/slapd.conf
+  327  vim /etc/postfix/main.cf 
+  328  vim /etc/aliases
+  329  ./demo.sh 
+  330  ll /var/lib/ldap/
+  331  ll /var/lib
+  332  mkdir /var/lib/ldap/example44.lab
+  333  chown ldap /var/lib/ldap/example44.lab
+  334  chgrp ldap /var/lib/ldap/example44.lab
+  335  chmod 700 /var/lib/ldap/example44.lab
+  336  vim /etc/openldap/slapd.conf
+  337  vim /etc/aliases
+  338  mail
+  339  vim /etc/openldap/slapd.conf
+  340  slaptest -u
+  341  rpm -ql openldap-server
+  342  rpm -ql openldap-servers
+  343  rpm -ql openldap-servers | grep DB_CONFIG | cp DB_CONFIG
+  344  vim /etc/openldap/slapd.conf
+  345  cp /usr/share/openldap-servers/DB_CONFIG.example  /var/lib/ldap/DB_CONFIG
+  346  chown ldap /var/lib/ldap/DB_CONFIG
+  347  systemctl enable slapd
+  348  systemctl start slapd
+  349  ss -ltpn
+  350  vim /etc/openldap/ldap.conf 
+  351  vim /var/named/named.example44.lab 
+  352  nmap
+  353  nmap 172.16.31.44
+  354  dig -x 1.1.1.1
+  355  dig -x 4.4.4.4
+  356  dig -x 4.4.8.8
+  357  dig ns google.ca
+  358  vim /etc/named.conf 
+  359  vim /var/named/named.example44.lab 
+  360  rpm -ql bind-utils 
+  361  man nsupdate
+  362  man ldapadd
+  363  ll /etc/openldap/ldif.example44/
+  364  man ldapadd
+  365  yum install nss-pam-ldapd
+  366  ss -ltpn | grep ldap
+  367  ss -ltpn
+  368  ss -ltpn | grep slapd
+  369  yum install samba
+  370  yum install samba-common
+  371  yum install samba-clients
+  372  yum install samba-client
+  373  testparm
+  374  vim /etc/samba/smb.conf
+  375  smbstatus 
+  376  smbclient -L localhost
+  377  systemctl start smbd
+  378  systemctl start smb
+  379  smbclient -L localhost
+  380  smbclient -L 172.16.30.44
+  381  vim /etc/samba/smb.conf
+  382  host ns google.ca
+  383  host google.ca
+  384  ping 172.16.31.44
+  385  systemctl restart named
+  386  dig google.ca
+  387  ./testnet.sh 
+  388  restart service named
+  389  service restart named
+  390  service named restart
+  391  service postfix restart
+  392  service sshd restart
+  393  service httpd restart
+  394  ip addr show all
+  395  ip addr show
+  396  ip addr
+  397  ping www.onip.citizenship.gov.on.ca
+  398  dig www.onip.citizenship.gov.on.ca
+  399  vim demo.sh 
+  400  ll /etc/httpd/conf/
+  401  vim /etc/httpd/conf/httpdbackup2.conf 
+  402  vim /etc/httpd/conf/httpdbackup.conf 
+  403  systemctl list-all-files
+  404  systemctl list-all-file
+  405  systemctl list-all
+  406  yum installed
+  407  yum list installed
+  408  yum list installed | grep ldap
+  409  yum search ldap
+  410  man ldapadd
+  411  yum install ldap
+  412  yum search openldap
+  413  yum install openldap
+  414  ll /etc/openldap/schema/
+  415  ll /etc/openldap/
+  416  mv /etc/openldap/slapd.d /etc/openldap/slapd.dd
+  417  vim FWrules.sh 
+  418  man chusr
+  419  mail
+  420  su - cst8213
+  421  ll /etc/openldap/
+  422  mkdir /etc/openldap/ldif.example44
+  423  vim /etc/openldap/ldif.example44/base.ldif
+  424  vim /etc/openldap/ldif.example44/ou.ldif
+  425  mkdir /etc/openldap/ldif.example44
+  426  vim /etc/openldap/ldif.example44/base.ldif
+  427  ll /etc/openldap/
+  428  vim /etc/openldap/ldif.example44/base.ldif
+  429  vim /etc/openldap/ldif.example44/ou.ldif
+  430  vim /etc/openldap/ldif.example44/oumodify.ldif
+  431  vim /etc/openldap/ldif.example44/ou.ldif
+  432  cp /etc/openldap/ldif.example44/ou.ldif /etc/openldap/ldif.example44/ouhosts.ldif
+  433  vim /etc/openldap/ldif.example44/ouhosts.ldif
+  434  systemctl restart samba
+  435  systemctl restart sladp
+  436  systemctl restart sldap
+  437  systemctl restart smb
+  438  iptables -F
+  439  systemctl restart smb
+  440  smbpasswd cst8213
+  441  systemctl restart smb
+  442  ll /home/cst8213/
+  443  ll /home/cst8213/.
+  444  ll /home
+  445  chmod 775 /home/cst8213
+  446  systemctl restart smb
+  447  yum installed
+  448  yum list installed
+  449  yum list installed | grep nss
+  450  systemctl restart smb
+  451  vim /etc/samba/smb.conf.example 
+  452  host ns google.ca
+  453  host google.ca
+  454  ping 172.16.31.44
+  455  systemctl restart named
+  456  dig google.ca
+  457  ./testnet.sh 
+  458  restart service named
+  459  service restart named
+  460  service named restart
+  461  service postfix restart
+  462  service sshd restart
+  463  service httpd restart
+  464  ip addr show all
+  465  ip addr show
+  466  ip addr
+  467  ping www.onip.citizenship.gov.on.ca
+  468  dig www.onip.citizenship.gov.on.ca
+  469  vim demo.sh 
+  470  ll /etc/httpd/conf/
+  471  vim /etc/httpd/conf/httpdbackup2.conf 
+  472  vim /etc/httpd/conf/httpdbackup.conf 
+  473  systemctl list-all-files
+  474  systemctl list-all-file
+  475  systemctl list-all
+  476  yum installed
+  477  yum list installed
+  478  yum list installed | grep ldap
+  479  yum search ldap
+  480  man ldapadd
+  481  yum install ldap
+  482  yum search openldap
+  483  yum install openldap
+  484  ll /etc/openldap/schema/
+  485  ll /etc/openldap/
+  486  mv /etc/openldap/slapd.d /etc/openldap/slapd.dd
+  487  vim FWrules.sh 
+  488  man chusr
+  489  mail
+  490  su - cst8213
+  491  ll /etc/openldap/
+  492  mkdir /etc/openldap/ldif.example44
+  493  vim /etc/openldap/ldif.example44/base.ldif
+  494  vim /etc/openldap/ldif.example44/ou.ldif
+  495  mkdir /etc/openldap/ldif.example44
+  496  vim /etc/openldap/ldif.example44/base.ldif
+  497  ll /etc/openldap/
+  498  vim /etc/openldap/ldif.example44/base.ldif
+  499  vim /etc/openldap/ldif.example44/ou.ldif
+  500  vim /etc/openldap/ldif.example44/oumodify.ldif
+  501  vim /etc/openldap/ldif.example44/ou.ldif
+  502  cp /etc/openldap/ldif.example44/ou.ldif /etc/openldap/ldif.example44/ouhosts.ldif
+  503  vim /etc/openldap/ldif.example44/ouhosts.ldif
+  504  systemctl restart samba
+  505  systemctl restart sladp
+  506  systemctl restart sldap
+  507  systemctl restart smb
+  508  iptables -F
+  509  systemctl restart smb
+  510  smbpasswd cst8213
+  511  systemctl restart smb
+  512  ll /home/cst8213/
+  513  ll /home/cst8213/.
+  514  ll /home
+  515  chmod 775 /home/cst8213
+  516  systemctl restart smb
+  517  yum installed
+  518  yum list installed
+  519  yum list installed | grep nss
+  520  systemctl restart smb
+  521  vim /etc/samba/smb.conf.example 
+  522  dig @172.16.30.44 google.ca ns
+  523  nslookup -query=ns google.ca 172.16.31.44
+  524  vim /etc/passwd
+  525  vim /etc/group
+  526  vim /etc/passwd
+  527  cat /etc/passwd | grep jia00025
+  528  vim /etc/group
+  529  man groupmod
+  530  cat /etc/passwd | grep cst8213
+  531  ldapadd -x -D "dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/base.ldif 
+  532  ldapadd -x -D "dc=example44,dc=lab" -w abc -f /etc/openldap/ldif.example44/base.ldif 
+  533  ldapadd -x -D "dc=example44,dc=lab" -f /etc/openldap/ldif.example44/base.ldif 
+  534  ldapadd -x -D "cn=jia00025,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/base.ldif 
+  535  ldapadd -x -D "cn=jia00025,dc=example44,dc=lab" -w   -f /etc/openldap/ldif.example44/base.ldif 
+  536  ldapadd -x -D "cn=jia00025,dc=example44,dc=lab" -w -f /etc/openldap/ldif.example44/base.ldif 
+  537  ldapadd -x -D "cn=jia00025,dc=example44,dc=lab" -w abc -f /etc/openldap/ldif.example44/base.ldif 
+  538  ldapadd -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/base.ldif 
+  539  ldapsearch -x "objectclass=*"
+  540  ldapsearch -x "cn=*lin*"
+  541  ldapadd -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/ou.ldif 
+  542  ldapsearch -x "cn=*lin*"
+  543  ldapsearch -x "objectclass=*"
+  544  ldapsearch -x "cn=*lin*" mail
+  545  vim /etc/openldap/ldif.example44/ou.ldif 
+  546  ldapmodify -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/oumodify.ldif
+  547  ldapsearch -x "cn=*lin*" mail
+  548  ldapmodify -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/oumodify.ldif
+  549  ldapsearch -x "cn=*lin*" mail
+  550  ldapmodify -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/oumodify.ldif
+  551  ldapsearch -x "cn=*lin*" mail
+  552  ldapadd -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/ouhosts.ldif 
+  553  vim FWrules.sh 
+  554  ./demo.sh 
+  555  ./FWrules.sh 
+  556  iptables -L -v -n
+  557  ping 172.16.30.1
+  558  ping 172.16.30.89
+  559  ping 172.16.30.2
+  560  ping 172.16.30.3
+  561  ping 172.16.30.149
+  562  yum search samba
+  563  man rpm
+  564  rpm -q samba
+  565  yum info samba
+  566  yum info samba-common
+  567  yum info samba-client
+  568  yum info samba-devel
+  569  yum info samba-test
+  570  man smbd
+  571  yum install samba
+  572  man smbd
+  573  man smb
+  574  yum install samba-common
+  575  yum install smb
+  576  man smb
+  577  man testparm
+  578  man smbpasswd
+  579  man pdbedit
+  580  man smbclient
+  581  man smbstatus
+  582  yum info nfs
+  583  yum info nfs-common
+  584  yum search nfs
+  585  man rpcbind
+  586  man showmount
+  587  man exportfs
+  588  man mount
+  589  man nfsd
+  590  yum info client
+  591  yum info samba-client
+  592  su - cst8213
+  593  man smbpasswd
+  594  smbpasswd -a cst8213 -w cst8213
+  595  smbpasswd -a cst8213
+  596  su - cst8213
+  597  smbclient //172.16.30.44/cst8213
+  598  smbclient //172.16.30.44/cst8213 -U cst8213%cst8213
+  599  ip route
+  600  tracert 172.16.31.44
+  601  traceroute 172.16.31.44
+  602  man smb.conf
+  603  smbclient //172.16.30.44/cst8213 -U cst8213%cst8213
+  604  setsebool -P samba_enable_home_dirs on
+  605  systemctl restart smb
+  606  ll /home/cst8213/
+  607  ll /var/lib/samba/
+  608  umask
+  609  smbclient -L
+  610  smbclient -L localhost
+  611  systemctl restart smb
+  612  testparm
+  613  smbclient -L localhost
+  614  ll /srv
+  615  mkdir /srv/samba/rwShare
+  616  mkdir /srv/samba
+  617  mkdir /srv/samba/rwShare
+  618  systemctl restart smb
+  619  smbclient -L localhost
+  620  touch /srv/samba/rwShare/foo
+  621  ll /srv/samba/rwShare/
+  622  ll /srv/
+  623  ll /srv
+  624  ll /s*
+  625  ll /
+  626  ll /srv/samba/
+  627  ll /srv
+  628  ll /srv/samba/
+  629  ll /srv/samba/rwShare/
+  630  systemctl restart smb
+  631  man chcon
+  632  ls -ldZ /srv/samba/rwShare/
+  633  chcon -t samba_share_t /srv/samba/rwShare/
+  634  chcon -t samba_share_t /srv/samba/rwShare/foo
+  635  ./testnet.sh 
+  636  vim ./testnet.sh 
+  637  man selinux
+  638  vim /etc/selinux/config 
+  639  systemctl restart selinux
+  640  ./testnet.sh 
+  641  man selinux
+  642  vim /etc/selinux/config 
+  643  systemctl list installed
+  644  systemctl installed
+  645  systemctl list-installed
+  646  systemctl lists installed
+  647  man systemctl
+  648  systemctl list-unit-files
+  649  systemctl list-unit-files | grep -i selinux
+  650  reboot +0
+  651  dig @172.16.30.44 google.ca ns
+  652  nslookup -query=ns google.ca 172.16.31.44
+  653  vim /etc/passwd
+  654  vim /etc/group
+  655  vim /etc/passwd
+  656  cat /etc/passwd | grep jia00025
+  657  vim /etc/group
+  658  man groupmod
+  659  cat /etc/passwd | grep cst8213
+  660  ldapadd -x -D "dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/base.ldif 
+  661  ldapadd -x -D "dc=example44,dc=lab" -w abc -f /etc/openldap/ldif.example44/base.ldif 
+  662  ldapadd -x -D "dc=example44,dc=lab" -f /etc/openldap/ldif.example44/base.ldif 
+  663  ldapadd -x -D "cn=jia00025,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/base.ldif 
+  664  ldapadd -x -D "cn=jia00025,dc=example44,dc=lab" -w   -f /etc/openldap/ldif.example44/base.ldif 
+  665  ldapadd -x -D "cn=jia00025,dc=example44,dc=lab" -w -f /etc/openldap/ldif.example44/base.ldif 
+  666  ldapadd -x -D "cn=jia00025,dc=example44,dc=lab" -w abc -f /etc/openldap/ldif.example44/base.ldif 
+  667  ldapadd -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/base.ldif 
+  668  ldapsearch -x "objectclass=*"
+  669  ldapsearch -x "cn=*lin*"
+  670  ldapadd -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/ou.ldif 
+  671  ldapsearch -x "cn=*lin*"
+  672  ldapsearch -x "objectclass=*"
+  673  ldapsearch -x "cn=*lin*" mail
+  674  vim /etc/openldap/ldif.example44/ou.ldif 
+  675  ldapmodify -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/oumodify.ldif
+  676  ldapsearch -x "cn=*lin*" mail
+  677  ldapmodify -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/oumodify.ldif
+  678  ldapsearch -x "cn=*lin*" mail
+  679  ldapmodify -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/oumodify.ldif
+  680  ldapsearch -x "cn=*lin*" mail
+  681  ldapadd -x -D "cn=ldapadm,dc=example44,dc=lab" -w secret -f /etc/openldap/ldif.example44/ouhosts.ldif 
+  682  vim FWrules.sh 
+  683  ./demo.sh 
+  684  ./FWrules.sh 
+  685  iptables -L -v -n
+  686  ping 172.16.30.1
+  687  ping 172.16.30.89
+  688  ping 172.16.30.2
+  689  ping 172.16.30.3
+  690  ping 172.16.30.149
+  691  yum search samba
+  692  man rpm
+  693  rpm -q samba
+  694  yum info samba
+  695  yum info samba-common
+  696  yum info samba-client
+  697  yum info samba-devel
+  698  yum info samba-test
+  699  man smbd
+  700  yum install samba
+  701  man smbd
+  702  man smb
+  703  yum install samba-common
+  704  yum install smb
+  705  man smb
+  706  man testparm
+  707  man smbpasswd
+  708  man pdbedit
+  709  man smbclient
+  710  man smbstatus
+  711  yum info nfs
+  712  yum info nfs-common
+  713  yum search nfs
+  714  man rpcbind
+  715  man showmount
+  716  man exportfs
+  717  man mount
+  718  man nfsd
+  719  yum info client
+  720  yum info samba-client
+  721  su - cst8213
+  722  man smbpasswd
+  723  smbpasswd -a cst8213 -w cst8213
+  724  smbpasswd -a cst8213
+  725  su - cst8213
+  726  smbclient //172.16.30.44/cst8213
+  727  smbclient //172.16.30.44/cst8213 -U cst8213%cst8213
+  728  ip route
+  729  tracert 172.16.31.44
+  730  traceroute 172.16.31.44
+  731  man smb.conf
+  732  smbclient //172.16.30.44/cst8213 -U cst8213%cst8213
+  733  setsebool -P samba_enable_home_dirs on
+  734  systemctl restart smb
+  735  ll /home/cst8213/
+  736  ll /var/lib/samba/
+  737  umask
+  738  smbclient -L
+  739  smbclient -L localhost
+  740  systemctl restart smb
+  741  testparm
+  742  smbclient -L localhost
+  743  ll /srv
+  744  mkdir /srv/samba/rwShare
+  745  mkdir /srv/samba
+  746  mkdir /srv/samba/rwShare
+  747  systemctl restart smb
+  748  smbclient -L localhost
+  749  touch /srv/samba/rwShare/foo
+  750  ll /srv/samba/rwShare/
+  751  ll /srv/
+  752  ll /srv
+  753  ll /s*
+  754  ll /
+  755  ll /srv/samba/
+  756  ll /srv
+  757  ll /srv/samba/
+  758  ll /srv/samba/rwShare/
+  759  systemctl restart smb
+  760  man chcon
+  761  ls -ldZ /srv/samba/rwShare/
+  762  chcon -t samba_share_t /srv/samba/rwShare/
+  763  chcon -t samba_share_t /srv/samba/rwShare/foo
+  764  ./testnet.sh 
+  765  vim ./testnet.sh 
+  766  man selinux
+  767  vim /etc/selinux/config 
+  768  systemctl restart selinux
+  769  ./testnet.sh 
+  770  man selinux
+  771  vim /etc/selinux/config 
+  772  systemctl list installed
+  773  systemctl installed
+  774  systemctl list-installed
+  775  systemctl lists installed
+  776  man systemctl
+  777  systemctl list-unit-files
+  778  systemctl list-unit-files | grep -i selinux
+  779  reboot +0
+  780  vim /srv/samba/rwShare/readme.smb
+  781  mkdir /srv/nfs
+  782  mkdir /srv/nfs/restricted
+  783  vim /srv/nfs/restricted/README.nfs
+  784  vim /etc/exports
+  785  exportfs -r -a
+  786  exportfs -v
+  787  vim /etc/exports
+  788  exportfs -r -a
+  789  exportfs -v
+  790  vim /etc/exports
+  791  exportfs -r -a
+  792  exportfs -v
+  793  ll /srv/nfs/
+  794  chmod 777 /srv/nfs/restricted/
+  795  vim /etc/exports
+  796  exportfs -r -a
+  797  exportfs -v
+  798  vim /etc/passwd
+  799  mail
+  800  smbclient -L localhost
+  801  ss -ltpn
+  802  netstat -ltpn
+  803  netstat -ltpnu
+  804  man lsof
+  805  lsof -i :2049
+  806  lsof -i :852
+  807  netstat -ltpnuae
+  808  lsof | grep 92027
+  809  lsof | grep 92024
+  810  lsof | grep 92026
+  811  lsof
+  812  lsof | grep 50771
+  813  ll
+  814  vim demo.sh 
+  815  ./demo.sh 
+  816  vim FWrules.sh 
+  817  ./demo.sh 
+  818  yum install nfs-utils
+  819  systemctl start rpcbind
+  820  ss -ltpn
+  821  rpcinfo -s
+  822  rpcinfo -p
+  823  systemctl start nfs
+  824  man 5 exports
+  825  mail
+  826  vim /etc/samba/smb.conf
+  827  su - cst8213
+  828  yum install postgresql-server
+  829  postgresql-setup initdb
+  830  ll /var/lib/pgsql/data/
+  831  ll -a /var/lib/pgsql/data/
+  832  systemctl enable postgresql.service
+  833  systemctl start postgresql.service
+  834  ss -ltpn | gerp postgres
+  835  ss -ltpn | grep postgres
+  836  vim /etc/passwd
+  837  su - postgres
+  838  vim /var/lib/pgsql/data/pg_hba.conf 
+  839  vim /var/lib/pgsql/data/postgresql.conf 
+  840  systemctl restart postgresql.service
+  841  vim /etc/rsyslog.conf 
+  842  systemctl restart rsyslog
+  843  systemctl enable postgresql.service
+  844  systemctl status postgresql.service
+  845  su - cst8213
+  846  vim /var/lib/pgsql/data/postgresql.conf 
+  847  systemctl restart postgresql.service
+  848  ss -ltpn
+  849  systemctl enable smb
+  850  systemctl enable slapd
+  851  systemctl enable named
+  852  systemctl enable nfs
+  853  vim /var/lib/pgsql/data/postgresql.conf 
+  854  vim /var/lib/pgsql/data/pg_hba.conf 
+  855  systemctl restart postgresql.service
+  856  systemctl restart postfix
+  857  ll -a
+  858  ll ./.ssh/
+  859  vim ./.ssh/authorized_keys 
+  860  su - cst8213
+  861  yum remove openssh
+  862  yum reinstall openssh
+  863  yum remove openssh
+  864  vim /etc/ssh/sshd_config 
+  865  yum remove openssh
+  866  tail -f /var/log/messages
+  867  ss -ltpn
+  868  systemctl start named
+  869  dig www.example44.lab
+  870  systemctl start named
+  871  ss -ltpn
+  872  systemctl start smb
+  873  smbclient 
+  874  systemctl restart nfs
+  875  useradd user1 -u 601
+  876  useradd user2 -u 600
+  877  passwd user1
+  878  passwd user2
+  879  exportfs -v
+  880  vim /etc/passwd
+  881  useradd dbadmin -g wheel
+  882  passwd dbadmin
+  883  su - dbadmin
+  884  su - testdb
+  885  vim /etc/passwd
+  886  useradd testdb -g wheel
+  887  passwd testdb
+  888  su - testdb
+  889  systemctl restart postgres
+  890  systemctl restart postgresql
+  891  su - cst8213
+  892  su - testdb
+  893  ll /var/lib/pgsql/data/
+  894  createuser -s cst8213
+  895  su - postgres
+  896  vim FWrules.
+  897  vim FWrules.sh 
+  898  ./FWrules.sh 
+  899  yum search eclipse
+  900  yum search EE
+  901  ss -ltpn
+  902  ss -ltpn | grep sshd
+  903  vim /etc/ssh/sshd_config 
+  904  systemctl restart sshd
+  905  vim /etc/ssh/sshd_config 
+  906  systemctl restart sshd
+  907  su - cst8213
+  908  yum install openssh
+  909  systemctl isolate graphical.target
+  910  ll
+  911  dig google.ca
+  912  ss -ltpn
+  913  ss -ltpn | less
+  914  ./demo.sh 
+  915  startx
+  916  less /etc/ssh/sshd_config 
+  917  vim /etc/ssh/sshd_config 
+  918  systemctl restart sshd
+  919  su - cst8213@172.16.30.44
+  920  yum install graphic.target
+  921  vim /etc/ssh/sshd_config 
+  922  systemctl restart sshd
+  923  ./demo.sh 
+  924  su - cst8213
+  925  iptables -L -n -v
+  926  ss -ltpn | less
+  927  nc -kvl 49999
+  928  su - cst8213
+  929  vim /etc/selinux/config 
+  930  su - cst8213
+  931  vim /etc/selinux/config 
+  932  reboot
+  933  ll /home/cst8213/.ssh
+  934  su - cst8213
+  935  tail -f /var/log/messages
+  936  vim /etc/ssh/sshd_config 
+  937  systemctl restart sshd
+  938  vim /etc/selinux/config 
+  939  reboot
+  940  su - cst8213
+  941  createdb database postfix owner postfix encoding 'unicode'
+  942  createdb owner postfix encoding 'unicode'
+  943  createdb dbname postfix -o postfix -E 'unicode'
+  944  createdb DATABASE postfix OWNER postfix -E 'unicode'
+  945  createdb DATABASE postfix
+  946  su - postfix
+  947  vim /etc/passwd
+  948  su - postfix
+  949  vim /etc/passwd
+  950  su - postfix
+  951  su - postfix
+  952  vim /etc/passwd
+  953  vim /var/lib/pgsql/data/pg_hba.conf 
+  954  man createdatabase
+  955  man createuser
+  956  man createdb
+  957  vim /etc/ssh/sshd_config 
+  958  systemctl restart sshd
+  959  tail -f /var/log/messages
+  960  ll /home
+  961  chmod 755 /home/cst8213/
+  962  ./demo.sh 
+  963  nc -lkv 49999
+  964  mail
+  965  su - dbadmin
+  966  passwd postfix
+  967  su - postfix
+  968  systemctl list-units --type=target
+  969  systemctl isolate gphical.target
+  970  systemctl isolate graphical.target 
+  971  systemctl isolate graphical.target 
+  972  man yum
+  973  yum install openssh
+  974  yum install plymouthd
+  975  yum install plymouth
+  976  tail -f /var/log/messages
+  977  ll
+  978  demessage
+  979  demsage
+  980  yum groups install "GNOME Desktop"
+  981  yum groups install "Server with GUI"
+  982  systemctl isolate graphical.target 
+  983  systemctl start graphical.target
+  984  yum groups install "Server with GUI"reoo
+  985  reboot
+  986  systemctl set-default graphical.target 
+  987  reboot
+  988  stratx
+  989  yum install startx
+  990  xstart
+  991  startx
+  992  tail -f /var/log/messages
+  993  ./demo.sh 
+  994  ss -ltpn
+  995  mail
+  996  startx
+  997  ./demo.sh 
+  998  dig google.ca
+  999  dig -x 8.8.8.8
+ 1000  dig -x 8.8.8.8 @8.8.8.8
+ 1001  dig -x 8.8.8.8
+ 1002  host 8.8.8.8
+ 1003  host google.ca
+ 1004  host 8.8.8.8
+ 1005  systemctl restart named
+ 1006  host 8.8.8.8
+ 1007  dig 8.8.8.8
+ 1008  dig -x 8.8.8.8
+ 1009  ./demo.sh 
+ 1010  vim /etc/named.conf 
+ 1011  vim /var/named/named.site44.lab 
+ 1012  ./demo.sh 
+ 1013  mail
+ 1014  ./demo.sh 
+ 1015  vim /var/named/named.example44.lab 
+ 1016  vim /etc/postfix/main.cf 
+ 1017  vim /etc/selinux/config 
+ 1018  ll /etc/openldap/slapd.conf 
+ 1019  ll .
+ 1020  ll /
+ 1021  ll /etc/httpd
+ 1022  ll /etc/httpd/conf
+ 1023  vim /etc/httpd/conf/httpd.conf 
+ 1024  yum update
+ 1025  yum-complete-transaction
+ 1026  yum update
+ 1027  yum-complete-transaction
+ 1028  package-cleanup --problems
+ 1029  man chgrp
+ 1030  history | grep chgrp
+ 1031  history | grep chmod
+ 1032  ll /etc/openldap/slapd.conf 
+ 1033  history > cmdhistory.txt
